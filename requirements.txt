@@ -1,0 +1,20 @@
+bpy>=4.2,<5
+numpy
+Pillow
+scikit-learn
+scipy
+trimesh
+pygltflib
+reportlab
+# Material classification (OpenCLIP zero-shot, ~150 MB model download
+# on first run, cached afterwards). CPU inference is supported.
+open_clip_torch>=2.20
+# Optional: ML fine-callout enricher. The parts-anatomy and
+# fabric/color-anatomy PDFs are rendered from mesh-derived data even
+# without these packages. When transformers+torch ARE installed,
+# GroundingDINO + SAM 2 image predictor add 3-4 extra fine-detail
+# callouts (eyelets, n-logo, tongue-label, foxing) that aren't separable
+# as 3D mesh components. First run downloads ~700 MB GroundingDINO
+# weights into the HF cache. CPU inference, ~10-15s per side view.
+transformers>=4.41
+torch

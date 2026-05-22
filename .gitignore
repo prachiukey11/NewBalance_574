@@ -1,0 +1,23 @@
+# Personal / interview-prep working files — never commit
+rough/
+
+# Generated artifacts (recreated by `python main.py …`)
+output/
+
+# Python bytecode caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# macOS / editor junk
+.DS_Store
+.vscode/
+.idea/
+
+# Runtime logs
+*.log
