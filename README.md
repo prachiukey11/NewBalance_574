@@ -76,7 +76,7 @@ extra minute or two for that, then it's cached.
 ## Requirements
 
 - **Python 3.11** (`bpy` 4.x wheels are 3.11-only — `bpy` is Blender bundled as a Python module, no GUI install required)
-- `reportlab`, `numpy`, `Pillow`, `scipy`, `scikit-learn`, `trimesh`, `pygltflib`
+- `reportlab`, `numpy`, `Pillow`, `scikit-learn`, `scipy`, `trimesh`, `pygltflib`
 - `open_clip_torch` for material classification
 - `transformers` + `torch` **optional** — only needed for the fine-callout enricher (eyelets, N logo, tongue label, foxing). The four PDFs render without them.
 
