@@ -45,7 +45,7 @@ def _draw_header_footer(c: rl_canvas.Canvas, header: TechPackHeader,
     c.drawRightString(page_w - margin, page_h - margin + 7,
                       f"{page_label}   {header.date_iso}")
     c.line(margin, margin - 4, page_w - margin, margin - 4)
-    c.setFont("Helvetica", 7)
+    c.setFont("Helvetica", 7)  # tight dim text
     c.setFillColor(colors.HexColor("#555555"))
     c.drawString(margin, margin - 12,
                  f"Source: {os.path.basename(header.source_file)}  ·  "
@@ -811,7 +811,7 @@ def write_techdrawings(
     def _draw_dimension_label(x, y, text):
         """Small black text on a faint white background — used for the
         leader-line dimension callouts."""
-        c.setFont("Helvetica", 7)
+        c.setFont("Helvetica", 7)  # tight dim text
         tw = c.stringWidth(text, "Helvetica", 7) + 3
         c.setFillColor(colors.white)
         c.rect(x - 1.5, y - 1, tw, 9, stroke=0, fill=1)
