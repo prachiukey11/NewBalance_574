@@ -1,6 +1,6 @@
 # Footwear TechPack — Write-up
 
-## (a) Which 3 capabilities I picked and why
+## (a) Which 3 capabilities I picked, and why
 
 | # | Capability | Why this one |
 |---|---|---|
