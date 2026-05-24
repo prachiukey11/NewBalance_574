@@ -48,7 +48,7 @@ For a shoe of a different size, pass the actual outsole length in mm:
 python main.py input/your_shoe.glb --target-length-mm 266   # US 8.5
 ```
 
-`glTF` carries no physical units, so the pipeline scales the model so its
+glTF carries no physical units, so the pipeline scales the model so its
 longest axis matches `--target-length-mm` (default `270 mm` = US-9). Every
 dimension on the BOM page derives from this number.
 
