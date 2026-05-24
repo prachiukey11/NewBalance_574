@@ -34,7 +34,7 @@ DEFAULT_MODEL = "facebook/sam2-hiera-small"
 def _load_sam(model_name: str = DEFAULT_MODEL, device: str = "cpu"):
     """Build (and cache) the SAM 2 auto-mask generator.
 
-    `device="cpu"` for determinism — MPS gives different mask boundaries
+    `device="cpu"` for byte-determinism — MPS gives different mask boundaries
     run-to-run due to non-deterministic op kernels."""
     if "gen" in _SAM_CACHE:
         return _SAM_CACHE["gen"]
