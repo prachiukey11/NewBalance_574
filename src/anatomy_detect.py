@@ -33,7 +33,7 @@ DEFAULT_DINO_MODEL = "IDEA-Research/grounding-dino-tiny"
 DEFAULT_SAM_MODEL = "facebook/sam2-hiera-small"
 
 
-# Each entry: (label_id, prompt_phrase, display_name, description).
+# Each tuple: (label_id, prompt_phrase, display_name, description).
 # Only the fine-detail parts that mesh segmentation can't separate.
 PART_VOCAB: List[Tuple[str, str, str, str]] = [
     ("eyelets",      "lace eyelets",
