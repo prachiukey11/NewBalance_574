@@ -1,6 +1,6 @@
 # Footwear TechPack Pipeline
 
-Turn a 3D shoe model (`.glb`) into a four-PDF factory tech pack:
+Turn a 3D shoe model file (`.glb`) into a four-PDF factory tech pack:
 multi-view renders, a Bill-of-Materials with dimensions, a colorway sheet
 with materials and palette, and a 2D technical drawing set.
 
