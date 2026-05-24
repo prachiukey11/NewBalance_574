@@ -741,7 +741,7 @@ def _draw_scale_bar(c: rl_canvas.Canvas,
 
 
 
-# Multi-page line-art tech drawings PDF
+# Multi-page line-art tech drawing PDF
 
 def write_techdrawings(
     output_path: str,
