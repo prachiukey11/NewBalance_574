@@ -1,5 +1,7 @@
 # Footwear TechPack — Write-up
 
+*Prachi Ukey · AI Engineer*
+
 ## (a) Which 3 capabilities I picked, and why
 
 | # | Capability | Why this one |
@@ -47,6 +49,12 @@ Two design choices worth flagging:
 - **Pattern unfolding** (the other capability I skipped). The right approach is per-component UV-unwrap with `xatlas` (open-source LSCM), then a seam-detection pass on the boundary curves to merge UV islands that share a stitch line. Output: one DXF per component at 1:1 scale, ready to feed a Gerber or Lectra cutting plotter. This is a week of work on its own — that is why I chose not to fake it.
 - **Custom-trained material classifier.** Today's CLIP zero-shot occasionally calls mesh "canvas" because it has no fashion-specific fine-tuning. A LoRA on ~500 labelled patches from footwear datasets would push confidence well above 0.9 on the common materials (suede, mesh, leather, EVA, rubber).
 - **Auto size detection.** Right now `--target-length-mm` is required to get correct millimetres (default 270 = US-9). Given a reference object in the scene or a foot-pose prior, the pipeline could auto-detect.
+
+**Target output (with one more week):** the two reference layouts below are what the BOM and tech-drawings pages would converge to — the parts-anatomy infographic uses a learned 2D detector to anchor every callout on the visible silhouette, and the technical-drawing master sheet packs orthographic + exploded + materials + dimensions onto one A3 plate that a factory pattern engineer can read at a glance.
+
+![Reference: parts-anatomy infographic — what the BOM page would converge to with a YOLOv8-seg callout anchor.](rough/refs/parts_anatomy.png)
+
+![Reference: A3 technical-drawing master sheet — orthographic views, exploded view, material callouts, fabric swatches, color palette, parts list and dimensions on one page.](rough/refs/technical_drawing.png)
 
 ## (d) Where I cut corners and what I'd harden for production
 
