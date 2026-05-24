@@ -131,3 +131,4 @@ reruns (default mode). Pass `--fast` to trade determinism for ~4× speed.
 The output directory is auto-cleaned at the start of each run — stale
 `*.pdf` files from earlier runs are deleted before the new four are
 written, so the output set is always exactly four files.
+
