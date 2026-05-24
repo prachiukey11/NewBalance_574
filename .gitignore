@@ -1,8 +1,8 @@
 # Personal / interview-prep working files — never commit
 rough/
 
-# Generated artifacts (recreated by `python main.py …`)
-output/
+# Large input assets (the .glb files are pulled separately)
+input/
 
 # Python bytecode caches
 __pycache__/
