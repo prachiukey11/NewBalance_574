@@ -748,3 +748,4 @@ def component_color_entries(components) -> List[PaletteEntry]:
         rgb = tuple(int(x) for x in c.dominant_color_rgb)
         out.append(_build_entry(rgb, 1.0))
     return out
+
