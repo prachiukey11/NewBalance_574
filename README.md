@@ -63,9 +63,9 @@ Where the time goes:
 | Stage | Time | Why |
 |-------|------|-----|
 | Blender Cycles renders (7+ photo views + 2 line-art + 2 id-masks + exploded + section) | ~2–3 min | Single-threaded CPU rendering at 1100×800 with 48 samples per pixel — this is what gives byte-identical reruns. Pass `--fast` for multi-threaded (~4× faster, but PNGs are not bit-identical). |
-| Mesh segmentation + SAM 2 refinement | ~30 s | SAM 2 (`hiera-small`, ~155 MB) runs once per side view to find tongue / collar / eyestay sub-components inside the upper. |
+| Mesh segmentation + SAM 2 refinement | ~30s | SAM 2 (`hiera-small`, ~155 MB) runs once per side view to find tongue / collar / eyestay sub-components inside the upper. |
 | CLIP material classifier | ~10 s | OpenCLIP `ViT-B/32` (~150 MB) zero-shot classifies each component into one of 12 material classes. |
-| (Optional) GroundingDINO fine callouts | ~30 s | Adds 3–4 extra callouts (eyelets, N logo, tongue label, foxing) that aren't separable as 3D mesh components. Only runs if `transformers` and `torch` are installed. |
+| (Optional) GroundingDINO fine callouts | ~30s | Adds 3–4 extra callouts (eyelets, N logo, tongue label, foxing) that aren't separable as 3D mesh components. Only runs if `transformers` and `torch` are installed. |
 | PDF assembly | ~5 s | ReportLab. |
 
 First run downloads model weights into `~/.cache/huggingface/` — budget an
