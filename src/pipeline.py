@@ -381,7 +381,7 @@ def run(
     # deterministic. The exact epoch doesn't matter — only that it's fixed.
     os.environ.setdefault("SOURCE_DATE_EPOCH", "1700000000")
     os.makedirs(output_dir, exist_ok=True)
-    # Intermediate PNG renders go to rough/_renders/<shoe>/ (gitignored)
+    # Intermediate PNG renders live in rough/_renders/<shoe>/ (gitignored)
     # — they're build artifacts, not deliverables, so they don't belong
     # next to the PDFs the interviewer / factory consumer opens. The
     # project root is two levels up from this file (src/pipeline.py).
