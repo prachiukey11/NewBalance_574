@@ -493,7 +493,7 @@ def run(
         )
         component_palettes.append(cp)
 
-    # Material classification per component (CLIP zero-shot + PBR heuristic).
+    # Material inference per component (CLIP zero-shot + PBR heuristic).
     log(f"      material inference (OpenCLIP ViT-B/32, CPU)")
     materials: list = []
     for comp in ga.components:
