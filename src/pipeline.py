@@ -582,7 +582,7 @@ def run(
     lineart_paths, _, _ = render_lineart_views(glb_path, renders_dir, td_cfg)
 
     # ---- Build the unified anatomy/colorway callout payload ----
-    # Mesh path always runs (uses existing per-component centroids from
+    # Mesh path runs unconditionally (uses existing per-component centroids from
     # the id-mask renders). ML path opportunistically adds fine parts
     # (eyelets, n-logo, tongue-label, foxing) when transformers+torch
     # are installed.
